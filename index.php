@@ -19,7 +19,7 @@
 ||
 ||
 	</pre>
-    <a href="login.php">Start!</a>
+    <a href="level1.php">Start!</a>
 </body>
 
 </html>
