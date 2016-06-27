@@ -20,10 +20,11 @@ if (!isset($_COOKIE['user_details'])) {
    setcookie('user_details', $filename);
 }
 else {
-   if (strpos($str, 'var') !== FALSE) {
+   $path = '/tmp/level3/'.$_COOKIE['user_details'];
+   if (substr(realpath($path),0,5) !== "/tmp/") {
       $out = "Permission denied";
    } else {
-      $out = file_get_contents('/tmp/level3/'.$_COOKIE['user_details']);
+      $out = file_get_contents($path);
    }
 }
 ?>

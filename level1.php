@@ -3,12 +3,16 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
    if(isset($_POST['username']) && isset($_POST['password'])) {
       if ("password".$_POST['username'] == $_POST['password']) {
          echo "Congrats! The flag is bRapRAt7. Don't share it with other teams!<br/>";
+         echo "<strong> <a href='submit.php'>Submit</a> your flag and then proceed to <a href='level2.php'>Level2</a></strong><br/>";
       }
    }
 }
 ?>
 
 <html>
+<head>
+<title>Level1</title>
+</head>
 <body>
 
 You will see the flag for this level by logging in successfully.

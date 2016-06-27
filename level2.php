@@ -21,12 +21,16 @@
          if ($count == 1) {
             echo "Welcome ".$_POST['username']."<br/>";
             echo "Congrats! The flag is deRes5ch. Don't share it with other teams!<br/>";
+            echo "<strong> <a href='submit.php'>Submit</a> your flag and then proceed to <a href='level3.php'>Level3</a></strong><br/>";
          }
       }
    }
 ?>
 
 <html>
+<head>
+<title>Level2</title>
+</head>
 <body>
 You will see the flag for this level by logging in successfully.<br/>
 <small>If you need a hint, try login first, then take a look at the page's source code</small>
