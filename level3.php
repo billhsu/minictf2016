@@ -20,7 +20,11 @@ if (!isset($_COOKIE['user_details'])) {
    setcookie('user_details', $filename);
 }
 else {
-   $out = file_get_contents('/tmp/level3/'.$_COOKIE['user_details']);
+   if (strpos($str, 'var') !== FALSE) {
+      $out = "Permission denied";
+   } else {
+      $out = file_get_contents('/tmp/level3/'.$_COOKIE['user_details']);
+   }
 }
 ?>
 
@@ -33,6 +37,6 @@ else {
 <div>
 This is level3, and you are <?php echo $out ?> <br/>
 <br>
-<small>You need to find the flag from /tmp/flag.txt. PHP source code of this page can be found here:  <a href="https://gist.github.com/billhsu/5b962d4a4c7231f3f6348e7e9cf6d49c">https://gist.github.com/billhsu/5b962d4a4c7231f3f6348e7e9cf6d49c</a></small>
+<small>The flag is stored in /tmp/flag.txt. PHP source code of this page can be found here:  <a href="https://gist.github.com/billhsu/5b962d4a4c7231f3f6348e7e9cf6d49c">https://gist.github.com/billhsu/5b962d4a4c7231f3f6348e7e9cf6d49c</a></small>
 </body>
 </html>

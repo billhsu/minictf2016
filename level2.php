@@ -17,10 +17,10 @@
          $sql = "SELECT * FROM user WHERE username = '$username' and password = '$password'";
          echo "<!-- Hint!: ".$sql." -->\n";
          $result = mysqli_query($db,$sql);
-         $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
          $count = mysqli_num_rows($result);
          if ($count == 1) {
             echo "Welcome ".$_POST['username']."<br/>";
+            echo "Congrats! The flag is deRes5ch. Don't share it with other teams!<br/>";
          }
       }
    }
@@ -28,10 +28,11 @@
 
 <html>
 <body>
-
-Login
+You will see the flag for this level by logging in successfully.<br/>
+<small>If you need a hint, try login first, then take a look at the page's source code</small>
 <hr>
-
+Login
+<br>
 <form action ="" method = "post">
    <input type="text" name="username" id="username" required autofocus><br/>
    <input type="password" name="password" id="password" required><br/>

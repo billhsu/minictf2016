@@ -1,9 +1,20 @@
+<?php
+if($_SERVER["REQUEST_METHOD"] == "POST") {
+   if(isset($_POST['username']) && isset($_POST['password'])) {
+      if ("password".$_POST['username'] == $_POST['password']) {
+         echo "Congrats! The flag is bRapRAt7. Don't share it with other teams!<br/>";
+      }
+   }
+}
+?>
+
 <html>
 <body>
 
-Login
+You will see the flag for this level by logging in successfully.
 <hr>
-
+Login
+<br>
 <form action ="" method = "post" onsubmit="return validation()">
    <input type="text" name="username" id="username" required autofocus><br/>
    <input type="password" name="password" id="password" required><br/>
